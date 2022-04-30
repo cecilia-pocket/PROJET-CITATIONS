@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Duels de citations</title>
+  <link rel="stylesheet" href="css/bulma.min.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a id="btn-open-login-modal" class="button is-light">
+            Connexion
+          </a>
+          <div id="login-user" class="block">
+
+          </div>
+          <input id="search" type="text" placeholder="Recherche" />
+          <button id="but-search" class="button is-success">Valider</button>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <h1 class="title">Duels de citations</h1>
+      <p class="subtitle">Quelle est votre citation favorite ?</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="tabs is-centered">
+      <ul>
+        <li class="is-active" id="tab-duel">
+          <a>Voter</a>
+        </li>
+        <li id="tab-tout"><a>Toutes les citations</a></li>
+      </ul>
+    </div>
+    <div class="columns" id="div-duel">
+      <div class="column">
+        <div class="card">
+          <div class="columns card-content">
+            <div class="column is-one-third">
+              <div class="card-image">
+                <figure class="image" id="image1">
+
+                </figure>
+              </div>
+            </div>
+            <div class="column is-8" id="citation1">
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="columns is-centered">
+              <p class="button is-danger" id="vote-citation1">
+                Voter pour la citation de gauche !
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="columns card-content">
+            <div class="column is-8" id="citation2">
+
+            </div>
+            <div class="column is-one-third">
+              <div class="card-image">
+                <figure class="image" id="image2">
+
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="columns is-centered">
+              <p class="button is-info" id="vote-citation2">Voter pour la citation de droite !</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="div-tout">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>n°</th>
+            <th>
+              Personnage
+              <a><i id="tr-per-up" class="fas fa-arrow-up"></i></a>
+              <a><i id="tr-per-down" class="fas fa-arrow-down"></i></a>
+            </th>
+            <th>
+              Citation
+              <a><i id="tr-cit-up" class="fas fa-arrow-up"></i></a>
+              <a><i id="tr-cit-down" class="fas fa-arrow-down"></i></a>
+            </th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tabcitations">
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <div id="mdl-login" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Connexion</p>
+        <button id="btn-close-login-modal1" class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p id="elt-affichage-login">
+
+        </p>
+      </section>
+      <footer class="modal-card-foot" style="justify-content: flex-end">
+        <button id="btn-close-login-modal2" class="button">Fermer</button>
+      </footer>
+    </div>
+  </div>
+
+  <div id="mdl-detail" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Détails de la citation</p>
+        <button id="btn-close-detail-modal1" class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p id="elt-affichage-detail">
+
+        </p>
+      </section>
+      <footer class="modal-card-foot" style="justify-content: flex-end">
+        <button id="btn-close-detail-modal2" class="button">Fermer</button>
+      </footer>
+    </div>
+  </div>
+  <script src="js/client.js"></script>
+</body>
+
+</html>
